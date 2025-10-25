@@ -29,3 +29,11 @@ section {
   margin-left: 10px;
   height: 20px;
 }
+
+svg {
+  display: block;
+}
+
+#about svg {
+  margin-top: -2px;
+}
