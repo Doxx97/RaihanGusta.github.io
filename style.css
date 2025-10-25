@@ -37,3 +37,7 @@ svg {
 #about svg {
   margin-top: -2px;
 }
+
+#contact {
+  padding-bottom: 100px;
+}
