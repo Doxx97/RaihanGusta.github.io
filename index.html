@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+              <a class="nav-link" aria-current="page" href="#Home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
@@ -76,37 +76,37 @@
             <p>Program yang saya pahami</p>
 
             <div class="skill mb-3">
-              <span><i class="bi bi-filetype-html text-danger me-2"></i>HTML</span>
+              <span><i class="fa-brands fa-html5 text-danger me-3"></i>HTML</span>
               <div class="progress">
-                <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+                <div class="progress-bar bg-danger" data-width="100%" style="width: 0%">100%</div>
               </div>
             </div>
 
             <div class="skill mb-3">
-              <span><i class="bi bi-filetype-css text-primary me-2"></i>CSS</span>
+              <span><i class="fa-brands fa-css3-alt text-primary me-3"></i>CSS</span>
               <div class="progress">
-                <div class="progress-bar bg-danger" style="width: 85%">85%</div>
+                <div class="progress-bar bg-danger" data-width="85%" style="width: 0%">85%</div>
               </div>
             </div>
 
             <div class="skill mb-3">
-              <span><i class="bi bi-filetype-js text-warning me-2"></i>JavaScript</span>
+              <span><i class="fa-brands fa-js text-warning me-3"></i>JavaScript</span>
               <div class="progress">
-                <div class="progress-bar bg-danger" style="width: 60%">60%</div>
+                <div class="progress-bar bg-danger" data-width="60%" style="width: 0%">60%</div>
               </div>
             </div>
 
             <div class="skill mb-3">
-              <span><i class="fa-brands fa-php text-primary me-1"></i>PHP</span>
+              <span><i class="fa-brands fa-php text-info me-2"></i>PHP</span>
               <div class="progress">
-                <div class="progress-bar bg-danger" style="width: 85%">85%</div>
+                <div class="progress-bar bg-danger" data-width="85%" style="width: 0%">85%</div>
               </div>
             </div>
 
             <div class="skill mb-3">
-              <span><i class="fa-brands fa-laravel text-danger me-2"></i>Laravel</span>
+              <span><i class="fa-brands fa-laravel text-danger me-3"></i>Laravel</span>
               <div class="progress">
-                <div class="progress-bar bg-danger" style="width: 70%">70%</div>
+                <div class="progress-bar bg-danger" data-width="70%" style="width: 0%">70%</div>
               </div>
             </div>
           </div>
@@ -132,39 +132,41 @@
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card project-card">
               <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Some quick example text ...</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card project-card">
               <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Some quick example text ...</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card project-card">
               <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Some quick example text ...</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
           fill-opacity="1"
-          d="M0,224L24,208C48,192,96,160,144,170.7C192,181,240,235,288,240C336,245,384,203,432,202.7C480,203,528,245,576,250.7C624,256,672,224,720,192C768,160,816,128,864,117.3C912,107,960,117,1008,144C1056,171,1104,213,1152,224C1200,235,1248,213,1296,202.7C1344,192,1392,192,1416,192L1440,192L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"
+          d="M0,224L24,208C48,192,96,160,144,170.7C192,181,240,235,288,240C336,245,384,203,432,202.7C480,203,528,245,576,250.7C624,256,672,224,720,192C768,160,816,128,864,117.3C912,107,960,117,1008,144C1056,171,1104,213,1152,224C1200,235,1248,213,1296,202.7C1344,192,1392,192,1416,192L1440,192L1440,320L0,320Z"
         ></path>
       </svg>
     </section>
+
     <!-- akhir Project -->
 
     <!--Contact-->
@@ -203,6 +205,7 @@
                 <span role="status">Loading...</span>
               </button>
             </form>
+            <div class="alert alert-success my-alert d-none mt-3" role="alert">✅ Pesan kamu sudah berhasil dikirim!</div>
           </div>
         </div>
       </div>
@@ -212,35 +215,21 @@
     <!-- footer -->
     <footer class="text-white text-center pb-2" style="background-color: #842a3b">
       <p>
-        Created for portofolio by <a href="https://www.instagram.com/screetyo" class="text-white fw-bold">Raihan Gusta</a>
+        Created for portofolio by <a href="https://www.instagram.com/screetyo" class="text-white fw-bold">Raihan Gusta</a> <br />Made with Bootstrap 5.0
         <br />
         <a href="https://www.instagram.com/screetyo"><i class="bi bi-instagram"></i></a>
         <a href="https://github.com/Doxx97"><i class="bi bi-github"></i></a>
       </p>
     </footer>
 
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwUsuHqu6O4GBLyEnIQvxhpwK4n8bwUpfCUGFjTIrfisi0iDtkv9FV_j1x8_pMDfci59w/exec';
-      const form = document.forms['submit-to-google-sheet'];
-      const btnKirim = document.querySelector('.btn-kirim');
-      const btnLoading = document.querySelector('.btn-loading');
-      const myAlert = document.querySelector('.my-alert');
+    <!-- ALERT POPUP -->
+    <div id="popupAlert" class="popup-alert d-none">
+      <div class="popup-box">
+        <div class="popup-icon" id="popupIcon"></div>
+        <p id="popupMessage"></p>
+      </div>
+    </div>
 
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        btnKirim.classList.toggle('d-none');
-        btnLoading.classList.toggle('d-none');
-
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then((response) => {
-            btnKirim.classList.toggle('d-none');
-            btnLoading.classList.toggle('d-none');
-            myAlert.classList.toggle('d-none');
-            form.reset();
-            console.log('Success!', response);
-          })
-          .catch((error) => console.error('Error!', error.message));
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

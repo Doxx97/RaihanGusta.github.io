@@ -1,3 +1,5 @@
+/* ====== BAGIAN DASAR ====== */
+
 .jumbotron {
   padding-top: 6rem;
   background-color: #f5daa7;
@@ -30,14 +32,206 @@ section {
   height: 20px;
 }
 
-svg {
+section svg {
   display: block;
+  margin-bottom: -1px;
 }
 
-#about svg {
-  margin-top: -2px;
+#about svg,
+#projects svg {
+  margin-bottom: -5px;
 }
 
 #contact {
   padding-bottom: 100px;
+}
+
+/* ====== ANIMASI AWAL ====== */
+
+/* Efek animasi foto (popup) */
+.jumbotron img {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 1s ease;
+}
+
+.jumbotron img.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Efek animasi teks (muncul pelan) */
+.jumbotron h1,
+.jumbotron p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.jumbotron h1.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.jumbotron p.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+/* ====== ANIMASI GELOMBANG ====== */
+
+.jumbotron svg path {
+  animation: none;
+}
+
+@keyframes waveMove {
+  0% {
+    d: path('M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,186.7C672,192,768,224,864,229.3C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L0,320Z');
+  }
+  50% {
+    d: path('M0,96L40,112C80,128,160,160,240,154.7C320,149,400,107,480,112C560,117,640,171,720,181.3C800,192,880,160,960,144C1040,128,1120,128,1200,154.7C1280,181,1360,235,1400,261.3L1440,288L1440,320L0,320Z');
+  }
+  100% {
+    d: path('M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,186.7C672,192,768,224,864,229.3C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L0,320Z');
+  }
+}
+
+/* ====== ANIMASI SCROLL (FADE IN & OUT) ====== */
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section.hide {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+/* ====== ANIMASI PROJECT ====== */
+
+/* Fade-in untuk judul */
+#projects h2 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+#projects h2.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efek kartu project */
+.project-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* Saat muncul */
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay animasi agar muncul satu-satu */
+.project-card:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.project-card:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.project-card:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+/* Pastikan background tidak ikut bergeser */
+#projects {
+  position: relative;
+  overflow: hidden;
+}
+#projects svg {
+  position: relative;
+  bottom: 0;
+  display: block;
+}
+
+.progress-bar {
+  transition: width 2.5s ease-in-out;
+}
+
+/* ==== POPUP ALERT ANIMASI ==== */
+.popup-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.4s ease;
+}
+
+.popup-box {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: popUp 0.4s ease;
+}
+
+.popup-icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+  animation: bounce 0.8s ease;
+}
+
+.popup-box.success .popup-icon {
+  color: #28a745; /* hijau */
+}
+
+.popup-box.error .popup-icon {
+  color: #dc3545; /* merah */
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
